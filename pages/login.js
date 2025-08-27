@@ -34,7 +34,7 @@ export default function Login() {
         router.push("/favourites");
       }
     } catch (err) {
-        console.error(" Login error:", err.message);// to check the code 
+        console.error(" Login error:", err.message);
       setWarning(err.message);
     } finally {
       setIsSubmitting(false);

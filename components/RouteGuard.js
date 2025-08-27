@@ -27,16 +27,16 @@ export default function RouteGuard(props) {
 
   async function authCheck(url) {
     const path = url.split('?')[0];
-      console.log(" authCheck -> URL:", url, " | Path:", path);// to check if the code is working
+      console.log(" authCheck -> URL:", url, " | Path:", path);
 
     if (!isAuthenticated() && !PUBLIC_PATHS.includes(path)) {
-            console.log(" Not authenticated. Redirecting to /login");//to check the code 
+            console.log(" Not authenticated. Redirecting to /login");
       setAuthorized(false);
       router.push('/login');
     } else {
       if (!favouritesList) setFavouritesList(await getFavourites());
       if (!searchHistory) setSearchHistory(await getHistory());
-         console.log(" Authenticated or public path, allowing access");// to check the code 
+         console.log(" Authenticated or public path, allowing access");
       setAuthorized(true);
     }
   }

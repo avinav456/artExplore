@@ -47,7 +47,7 @@ export default function MainNav() {
         variant="dark"
       >
         <Container>
-          <Navbar.Brand className="fw-bold">Avinav</Navbar.Brand>
+          <Navbar.Brand className="fw-bold">ArtExplore</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
 
